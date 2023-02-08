@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        max-width: 1120px;
+        margin:auto;
+        padding-top: 150px;
+    }
+    .button{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .btn{
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    p{
+        height: 250px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="button">
+            <button class="btn" id="red" onclick="style1(this)">Red</button>
+            <button class="btn" id="green" onclick="style1(this)">Green</button>
+            <button class="btn" id="blue" onclick = "style1(this)">Blue</button>
+        </div>
+        <p class="display" id="para"></p>
+    </div>
+</body>
+</html>
+<script>
+    let para = document.getElementById('para');
+    
+    function style1(id) { 
+        let color = id.getAttribute('id');
+        para.style.background=color;
+    }
+
+
+</script>
